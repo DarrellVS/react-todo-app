@@ -4,6 +4,9 @@
   "private": true,
   "homepage": "/build",
   "dependencies": {
+    "@dicebear/avatars": "^4.8.5",
+    "@dicebear/avatars-avataaars-sprites": "^4.8.5",
+    "@dicebear/croodles": "^4.8.5",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
