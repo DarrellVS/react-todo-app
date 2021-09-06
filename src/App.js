@@ -58,8 +58,7 @@ function App() {
 
   // Clear completed todos from array
   function handleClearComplete(e) {
-    const newTodos = todos.filter((todo) => !todo.complete)
-    setTodos(newTodos)
+    setTodos(todos.filter((todo) => !todo.complete))
   }
 
   // Toggle a todo from complete to incomplete and vice versa
@@ -84,7 +83,7 @@ function App() {
       <TodoList todos={todos} toggleTodo={toggleTodo} />
 
       <div className="inputs">
-        <input ref={todoNameRef} type="text" onKeyUp={validateInput} />
+        <input ref={todoNameRef} type="text" onKeyDown={validateInput} />
         <button onClick={handleAddTodo}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
