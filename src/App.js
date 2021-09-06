@@ -41,8 +41,12 @@ function App() {
     forceUpdate()
   }
 
+  function validateInput(e) {
+    if(e.code === 'Enter') handleAddTodo()
+  }
+
   // Add a todo element to the todos array
-  function handleAddTodo(e) {
+  function handleAddTodo() {
     const name = todoNameRef.current.value
     if (name === '') return
     setTodos((prevTodos) => [
@@ -80,7 +84,7 @@ function App() {
       <TodoList todos={todos} toggleTodo={toggleTodo} />
 
       <div className="inputs">
-        <input ref={todoNameRef} type="text" />
+        <input ref={todoNameRef} type="text" onKeyUp={validateInput} />
         <button onClick={handleAddTodo}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
