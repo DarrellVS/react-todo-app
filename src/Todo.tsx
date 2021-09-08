@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Todo({ todo, toggleTodo }) {
+export default function Todo({ todo, toggleTodo }: {todo: any, toggleTodo: any}) {
     const handleTodoClicked = () => toggleTodo(todo.id)
 
     return (
